@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OPF Source Publisher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="toolbar">
+        <div id="opfButton">
+            <h3>1. Select Your OPF file</h5>
+                <input id="opfFile" type="file">
+        </div>
+        <div id="levelSelector">
+            <h3>2. Choose Your Navigation Level</h3>    
+
+            <div id="navSelect">
+                <input type="radio" id="send_poll" name="nav" value="one" />One level<br/>      
+                <input type="radio" id="send_poll" name="nav" value="two" />Two level<br/>
+                <input type="radio" id="send_poll" name="nav" value="three" />Three level<br/>            
+            </div>
+
+
+        </div>
+        <div id='copyButton'>
+            <button class="btn" data-clipboard-action="copy" data-clipboard-target="#openClose">
+                <img src="assets/donotcopy.png" id="copyBtn" alt="Copy to clipboard">
+            </button>
+        </div>
+    </div>
+
+    <br><br>
+            
+    <div contenteditable="true" id="openClose">
+
+        <b><span class="dtbTitle"></b></span><br><br>
+        by <b><span class="dtbAuth"></span></b><br><br>
+        DB <b><span id="dbNumber"></span></b><br><br>
+        
+        [<b><span style="color:green">RECORDING AGENCY</span></b>] originally produced this unabridged recording for the commercial market. 
+        It has been adapted for the NLS talking-book program.
+        Elements from the original recording—including music, sound effects, announcements, or other additional material—may be present. 
+        Traditional NLS talking-book announcements have been added. <br><br>
+        This recording is used courtesy of <b><span class="sourcePub"></span></b>. <br><br>
+        Read by: [<b><span style="color:green">NARRATOR</span></b>]<br><br>
+        Approximate reading time: [<b><span style="color:green">00</span></b>] hours, [<b><span style="color:green">00</span></b>] minutes. <br><br>
+        
+        <span id="oneLevelText">This book contains markers allowing direct access to the [<b><span style="color:green">CONTENTS, PARTS, and  ETC.</span></b>].</span>
+        
+        <span id="twoLevelText">This book contains markers allowing direct access to: at level 1 the [<b><span style="color:green">CONTENTS, PARTS, and  ETC.</span></b>] and at level 2 the [<b><span style="color:green">SECTIONS, CHAPTERS, and  ETC.</span></b>].</span> 
+        
+        <span id="threeLevelText">This book contains markers allowing direct access to: at level 1 the [<b><span style="color:green">CONTENTS, PARTS, and  ETC.</span></b>]; at level 2 the [<b><span style="color:green">SECTIONS, CHAPTERS, and  ETC.</span></b>]; and at level 3 the [<b><span style="color:green">SUBSECTIONS, EXERCISES, and  ETC.</span></b>].</span> 
+
+        <br><br>
+        
+        <b>Library of Congress Annotation:</b> <br> <span id="locAnnotation"></span>
+
+        <br><br>
+        <hr>
+        <br><br>
+
+
+        End of: <b><span class="dtbTitle"></span></b><br><br>
+        by <b><span class="dtbAuth"></span></b> (SPELL)
+
+        <br><br>
+
+        Further reproduction or distribution in other than a specialized format is prohibited. If you found this book to be defective, please contact your cooperation network library.
+
+
+ 
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+    <script src="xmlreader.js"></script>
+    <script src="dist/clipboard.min.js"></script>
+    <script src="copydiv.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="navbuttons.js"></script>
+</body>
+</html>

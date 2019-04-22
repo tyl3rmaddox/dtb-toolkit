@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<title>APH Hindenburg DTB Tutorial</title>
+
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css">
+		<link rel="stylesheet" type="text/css" href="resources/tutorial.css">
+	</head>
+
+	<body> 
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="assets/hbg_checklist.pdf">HABC Checklist</a></li>
+			<li><a href="assets/scanning.pdf">How To Scan</a></li>
+		</ul>
+		<nav class="top-nav light-blue darken-4">
+			<div class="container">
+				<div class="nav-wrapper">
+					<a class="page-title">APH Studio</a>
+					<a id="version">Hindenburg User Guide</a>
+					<a onclick="play()" id="jpButton" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">mood</i></a>
+					<audio id="audio" src="assets/button/aff_1.wav" ></audio>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="index.html">Validation</a></li>
+						<li><a href="ebook.html">Epub Tool</a></li>
+						<li><a href="tutorial.html">Tutorial</a></li>						
+						<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Documentation<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<img id="logo" src="assets\aphlogo.gif">
+		<div class="container">
+			
+			<div class="row">
+				<!-- Content -->
+				<div class="col s9">
+					<div id="introduction" class="section scrollspy">
+						<h3 class="section-title">Introduction</h3>						
+						<p>The purpose of this guide is to cover the basics of building, exporting, and validating a Digital Talking Book (DTB) using Hindenburg Audio Book Creator (Hindenburg ABC) based on National Libary Service (NLS) Specifications. This guide assumes the user has access to wav file(s) containing a narrated text, an Open Package Format (opf) file with appropriate metadata, and tools for encrypting and validating an unencryped DTB in compliance with NLS specifications.</p>
+					</div> <!-- End Section -->
+
+					<div id="stepOne" class="section scrollspy">
+						<h5 class="section-title">1. Create a New Folder</h3>
+						<ul class="browser-default">
+							<li>Create an empty folder in Production which will be used to store your build session and exported DTB files</li> <br>
+							<li>The folder must be named with only the numerals of the DB number for the sake of validation. i.e. 88111  not DB88111 or 88111_dont_do_this</li>
+						</ul>
+					</div> <!-- End Section -->
+
+					<div id="stepTwo" class="section scrollspy">
+						<h5 class="section-title">2. Save Session</h3>
+						<ol type="a">
+							<li>Open Hindenburg NLS ABC and select File > Save As..</li> <br>
+							<li>Navigate to and select the newly created DB# folder</li> <br>
+							<li>Save as "session" and remember to frequently save (CTRL+S) during the build process</li>
+						</ol>
+					</div> <!-- End Section -->
+
+					<div id="stepThree" class="section scrollspy">
+						<h5 class="section-title">3. Enter Metadata</h3>
+						<ol type="a">
+							<li>File > Properties > Info (default tab)</li> <br>
+							<li>Scroll to the bottom, select import, select corresponding .opf file using DB#. Ensure you don't change Language and Multimedia Type drop boxes as you scroll. (default to Language = English-United States and Multimedia Type = Audio, NCX)</li> <br>
+							<li>Fill out..</li>
+							<ol type="i">
+								<li>Narrator</li>
+								<li>Produced date (must always current date of build/validation, change for any reruns)</li>
+								<li>(For revisions) Revision date, revision number, and revision description</li>
+								<li>Copy DTB Producer to Recording Agency line</li>
+						</ol>
+					</div>
+					<div id="stepFour" class="section scrollspy">
+						<h5 class="section-title">4. Set Default Styles</h3>
+						<ol type="a">
+							<li>While in Properties, select the Styles tab</li> <br>
+							<li>Under the Class column double click the desired field to set default attributes corresponding to most frequently used attribute for each level (H1 up to H6) </li> <br>
+							<ul class="browser-default">
+								<li>As you type in class attribute a drop down menu should appear with auto filled attribute options to select ensuring correct spelling. </li>
+								<li>H1 meaning level 1 as indicated with the marks on the wav file i.e. H1 set to “chapters” for a 1 level book or set to “parts” for a 2 level book</li>
+								<li>You will most likely never need to set these to singularly used attributes i.e. cast, acknowledgement/c, concluitem</li>
+							</ul>
+							<li>For books with simple headings that are numerals (1,2,3,4 etc) you can use the text column to set them to auto number by selecting the header field and inputing #.</li>
+						</ol>
+					</div>
+
+					<div id="stepFive" class="section scrollspy">
+						<h5 class="section-title">5. Import WAV Files</h3>
+						<p>Ensure your playhead is at 00:00:00 and select Import from the Tool Bar. Highlight all .wav files to be used in the build from the NLS books folder and wait a few moments for the workspace to process the incoming audio.</p>						
+					</div>	
+
+					<div id="stepSix" class="section scrollspy">
+						<h5 class="section-title">6. Set DTB navigation</h3>
+						<p>While the marks we use in studio recorder hold no bearing on a Hindenburg build they are still visible and navigable in the workspace. This will be helpful when setting headings, notes, and side breaks. To navigate between these visual “cues” you can use Tab or Page Up/Down. This jumps you to all cues in the file including level marks, generic marks, and side breaks. You will recognize which level a heading should be marked based on the number of the cue. (a 1 mark will correspond to level 1 navigation) </p>
+						<ol type="a">
+							<li>Headings:</li>	
+							<ul class="browser-default">
+								<li>Click and drag above or at the bottom of the WAV bar for the duration of the heading you wish to set. (in BWP, this would be the space from a navigation mark to its closing generic mark) A green arrow will indicate the beginning of heading audio and a red arrow will indicate the end. You can adjust these freely before giving the mark a value. To preview your work, press Shift + Space concurrently to isolate the selection.</li>
+								<li> To clear a selection, press escape or double click in the workspace.</li>
+								<li>Do not overlap headings. For example, book title and author should have some separation even though they are alway sequential.</li>
+								<li>Once you are pleased with the heading, choose the appropriate attribute from the Book Bar (Title, Author, Annotation, Close, H1-H6, etc.) or use keyboard shortcuts as seen in the <a href="HYPERLINK TO HOTKEYS">Keyboard Shortcuts</a> section.</li>
+								<li>Once set, you are free to assign your headings values at any point during the build based on preference in Manuscript View. You can do this as you go or set them collectively at the end.</li>
+								<li>If you would like to delete a heading that you have already set, you can do so by pressing Delete while the heading is selected in Manuscript View. Note: Ensure that the heading is in Select Mode (yellow) and not in Edit Mode (blue) when deleting.</li>
+							</ul>
+							<li>Specials without Navigation (Readers Notes/Sidebars/Boxes):</li>
+							<ul class="browser-default">
+								<li>These marked but reference free specials will be identified by the same numbers as seen in Studio Recorder (8 for beginning and 7 for closing).</li>
+								<li>Set in the same manner as headings -- select the beginning of a note and drag to the end (from the 8 mark to the 7)</li>
+								<li>Choose the corresponding attribute from the Book Bar</li>
+							</ul>
+							<li>Specials with Navigation (Foot notes/Explanatory notes):</li>
+							<ul class="browser-default">
+								<li>Set the playhead at the beginning of the Note Reference and select Note-Ref from the Book Bar. (the first 8 of the pair)</li>
+								<li>Highlight the entirety of the Note Content (from the second 8 to the 7) and select Note-Content from the Book Bar</li>
+								<li>If your Note References require numbering, you can do so in Manuscript View in the same way you would a heading. If there is no number associated with the note, it will be given the generic notation by default.</li>
+							</ul>
+							<li>Segmented Lists:</li>
+							<ul class="browser-default">
+								<li>Navigate to each 7 imported from Studio Recorder and drop a Segment mark on each. The quickest way to do this is to tab and click on sement until you find the next mark that is not a 7.</li>
+								<li>Be sure to adjust your 7 marks before importing to make this process quick and easy</li>
+							</ul>
+							<li>Side Breaks</li>
+							<ul class="browser-default">
+								<li>Side Break Markers are automatically generated at 90 minute intervals when WAV files are importing into the software.</li>
+								<li>As you do markup, you will Tab to a split in WAV files corresponding to the end of a side.</li>
+								<li>From here, find the nearest Side Break Mark (should be located around 1-2 ahead of the side break) and drag it to the silence between sides. <i>Note:</i> Because the audio no longer skips to the generic marker located at the beginning of a WAV file, ensure there isn't an unnatural amount of silence between sides. </li>
+							</ul> 
+						</ol>
+					</div>
+					<div id="stepSeven" class="section scrollspy">
+						<h5 class="section-title">7. Fill Out Text Values</h3>
+						<p>If you choose to fill out your navigable headings after markup, be sure to use Escape and F2 to toggle between Edit Mode (blue) and Select Mode (yellow). Do not press Enter to finalize an entry as it will create a blank navigable heading that is easy to miss. In edit mode, you can edit the text label to match the text of the book, then press Escape to switch to Select Mode in order to navigate to the next heading. Press F2 to reenter Edit Mode and highlight the entire heading for entry.</p>						
+					</div>
+					<div id="stepEight" class="section scrollspy">
+						<h5 class="section-title">8. Change Class Attributes</h3>
+						<p>Most class attribute will be filled in according to the defaults that you set in the Styles Tab (File > Properties > Styles), but there will be certain class attribute that will need to be changed during or after the build to reflect DTB navigation. (such as when Acknowledgments falls on the same level as chapters)</p>
+						<ul class="browser-default">
+							<li>Make sure your non-default class attributes are set to the correct level (H1, H2) even if they appear in manuscript mode as the default attribute. (Part, Chapter) If they are incorrect just right click the heading (or press the Function key) and hover over the second to last line and select the correct level from the menu of selections.</li>
+							<li>You can edit class attributes at any time and while in Select or Edit Modes</li> 
+					</div>
+					<div id="stepNine" class="section scrollspy">
+						<h5 class="section-title">9. Export Completed DTB</h3>
+						<p>When you have finished editing your book and you are ready to run the error/spell check and validate, click on the white arrow to the right of Export in the menu bar up top and select Export NLS DTB from the drop down menu. Select the correct DB folder in Production and begin export.</p>						
+					</div>		
+					
+					<div id="hotKeys" class="section scrollspy">
+						<h4 class="section-title">Essential Hotkeys</h4><br><br>
+						<div class="row">
+						<div class="col s6"><h5>Workspace</h5></div><div class="col s6"><h5>Manuscript</h5></div><br><br><br>	
+						<div class="col s3">Play</div><div class="col s3">Space</div><div class="col s3">Navigate Headers</div><div class="col s3"><i class="material-icons">arrow_upward</i><i class="material-icons">arrow_downward</i></div>
+						<div class="col s3">Play Selection</div><div class="col s3">Shift + Space</div><div class="col s3">Reset Selection (Yellow)</div><div class="col s3">Escape</div>
+						<div class="col s3">Record</div><div class="col s3">Ctrl + Space</div><div class="col s3">Edit Selection (Blue)</div><div class="col s3">F2</div>
+						<div class="col s3">Mark In</div><div class="col s3">i</div><div class="col s3">Delete Text/Header</div><div class="col s3">Delete</div>
+						<div class="col s3">Mark Out</div><div class="col s3">o</div><div class="col s3">Link Text to Time</div><div class="col s3">F1</div>
+						<div class="col s3">Go to Beginning</div><div class="col s3">Ctrl + Home</div><div class="col s3"><strong>Navigate Between Views</strong></div><div class="col s3">Ctrl + Tab</div>		
+						<div class="col s3">Go to End</div><div class="col s3">Ctrl + End</div><div class="col s3"></div><div class="col s3"></div>
+											
+					</div>	
+
+				</div> <!-- /Content -->
+
+				<!-- Table of Contents -->
+<!-- 				<div class="col s3">
+					<div id="tocWrapper">
+			      		<ul class="section table-of-contents">
+			      		</ul>
+		      		</div>
+				</div> -->
+			</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+		<script type="text/javascript" src="resources/main.js"></script>
+		<script type="text/javascript" src="resources/dropdown.js"></script>
+		<script type="text/javascript" src="resources/button.js"></script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>APH Studio Validation URL Generator</title>
+		
+		<script type="text/javascript">
+			function hbgVal(event) {
+				if ( event.keyCode === 13 ) {
+					window.location = "index_hind.php?url=/mnt/samba_share/Production/" + event.target.value + "&prefix=us-nls&id=" + event.target.value + "&op=hindAll"
+				}
+			}
+			
+			function bwpVal(event) {
+				if ( event.keyCode === 13 ) {
+					window.location = "index_bwp.php?url=/mnt/samba_share/Production/" + event.target.value + "/&id=" + event.target.value;
+				}
+			}			
+			
+		</script>
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css">
+		<link rel="stylesheet" type="text/css" href="resources/validation.css">
+	</head>
+	<body>
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="assets/hbg_checklist.pdf">HABC Checklist</a></li>
+			<li><a href="assets/scanning.pdf">How To Scan</a></li>
+		</ul>
+	<nav class="top-nav light-blue darken-4">
+		<div class="container">
+			<div class="nav-wrapper">
+				<a class="page-title">APH Studio</a>
+				<a id="version">DTB Toolkit</a>
+				<a id="jpButton" class="btn-floating btn-large waves-effect waves-light light-blue"><i class="material-icons">mood</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="index.html">Validation</a></li>
+						<li><a href="ebook.html">Epub Tool</a></li>
+						<li><a href="tutorial.html">Tutorial</a></li>						
+						<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Documentation<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+	<div class="ebookflexcontainer">
+
+		<div class="humanError">
+			<div class="ncxSelector">
+				<h5>Epub ncx</h5>
+				<p>Select the ncx file of an unencrypted, epub format book</p>
+				<input type="file" id="xmlFile" />
+			</div>
+			<br><br>
+
+			<h6 id="navpoints"></h6>
+
+		</div>
+
+		<div class="navSpace">
+
+			<h5>Ebook Navigation</h5>
+			
+			<br>
+
+			<table class="navStorage"></table>
+
+		</div>
+
+	</div>
+	<h5 id="confirm"></h3>
+
+		
+	<br><br>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script type="text/javascript" src="resources/dropdown.js"></script>
+	<script type="text/javascript" src='resources/JavaScriptSpellCheck/include.js'></script>
+	<script type="text/javascript" src="resources/spellcheck.js"></script>
+	<script type="text/javascript" src="resources/ebook.js"></script>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+nav.top-nav {
+	height: 120px;
+}
+
+#jpButton {
+	position: fixed;
+	left:1800px;
+	top:880px;
+}
+
+nav.top-nav a.page-title {
+	font-size: 2.5rem;
+	line-height: 120px;
+}
+
+a.page-title {
+	margin-top: 30px;
+}
+
+#version {
+	position: absolute;
+	top:55px;
+	left:1px;
+	font-size: 1.25rem;
+}
+
+.valContainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   margin-top: 5px
+   padding: 6px;
+}
+
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   margin-top: 5px
+   padding: 6px;
+}
+
+.ebookflexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   margin-top: 5px
+   padding: 6px;
+}
+
+.ncxSelector {
+	padding-left: 20px;
+	padding-right: 35px;
+}
+
+#navpoints {
+	position: absolute;
+	left: 345px;
+	top: 215px;
+	font-weight: bold;
+}
+
+#navCount {
+	margin: 15px;
+	padding: 20px;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-left: 30px;
+}
+
+#classCheck {
+	margin: 15px;
+	padding: 20px;
+	padding-right: 30px;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#valueCheck {
+	margin: 15px;
+	padding: 20px;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#nameCheck {
+  margin: 15px;
+  padding: 20px;
+  padding-right: 30px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#langCheck {
+  margin: 15px;
+  padding: 20px;
+  padding-right: 30px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#crossCheck {
+  margin: 15px;
+  padding: 20px;
+  padding-right: 30px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.valResultsOpf {
+  position: absolute;
+  top: 900px;
+  left: 600px;
+  border-radius: 1px;
+    --box-shadow-color: gray;
+    box-shadow: 0px 0px 15px var(--box-shadow-color);
+    padding: 30px;
+    width: 575px;
+    margin-left: 16px;
+    margin-top: 30px; 
+    margin-bottom: 15px;  
+}
+
+.valResultsBoth {
+  position: absolute;
+  top: 900px;
+  left: 1200px;
+  border-radius: 1px;
+    --box-shadow-color: gray;
+    box-shadow: 0px 0px 15px var(--box-shadow-color);
+    padding: 30px;
+    width: 575px;
+    margin-left: 16px;
+    margin-top: 30px; 
+    margin-bottom: 15px;  
+}
+
+.categories {
+	border-bottom: solid 1px;
+}
+
+.humanError {
+	flex: 1;
+	align-self: flex-start;
+	border-radius: 1px;
+    --box-shadow-color: gray;
+    box-shadow: 0px 0px 15px var(--box-shadow-color);
+  	max-width: 575px;
+  	margin-left: 15px;
+  	margin-top: 50px;
+}
+
+
+.spellCheck {
+	flex: 2;
+	border-radius: 1px;
+	align-self: flex-start;
+    --box-shadow-color: gray;
+    box-shadow: 0px 0px 15px var(--box-shadow-color);
+  	padding: 7px;
+  	max-width: 1140px;
+  	margin-right: 15px;
+  	margin-left: 50px;
+  	margin-top: 50px;
+  	padding-left: 20px;	
+  	padding-right: 30px;
+}
+
+.navSpace {
+	flex: 1;
+	align-content: left;
+	border-radius: 1px;
+	align-self: auto;
+    --box-shadow-color: gray;
+    box-shadow: 0px 0px 15px var(--box-shadow-color);
+  	padding: 10px;
+  	width: 1000px;
+  	margin-right: 15px;
+  	margin-left: 15px;
+  	margin-top: 50px;
+  	padding-left: 20px;	
+  	padding-right: 30px;
+}
+
+.urlGenerator {
+	position: absolute;
+	top: 425px;
+	border-radius: 1px;
+    --box-shadow-color: gray;
+    box-shadow: 0px 0px 15px var(--box-shadow-color);
+  	padding: 30px;
+  	width: 575px;
+  	margin-left: 16px;
+  	margin-top: 30px; 	
+}
+
+.valResults {
+	position: absolute;
+	top: 900px;
+	border-radius: 1px;
+    --box-shadow-color: gray;
+    box-shadow: 0px 0px 15px var(--box-shadow-color);
+    padding: 30px;
+  	width: 575px;
+  	margin-left: 16px;
+  	margin-top: 30px; 
+  	margin-bottom: 15px;	
+ }
+
+#instructions {
+	position: absolute;
+	font-style: italic;
+	top: 116px;
+	left: 35px;
+}
